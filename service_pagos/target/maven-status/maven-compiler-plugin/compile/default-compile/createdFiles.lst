@@ -1,0 +1,6 @@
+com\queseria\service_pagos\controller\PagoController.class
+com\queseria\service_pagos\service\PagoService.class
+com\queseria\service_pagos\controller\Operation.class
+com\queseria\service_pagos\ServicePagosApplication.class
+com\queseria\service_pagos\repository\PagoRepository.class
+com\queseria\service_pagos\modelo\Pago.class
