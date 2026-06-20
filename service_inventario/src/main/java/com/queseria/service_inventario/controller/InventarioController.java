@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/inventarios")
+@CrossOrigin(origins = "*")
 public class InventarioController {
     @Autowired
     private InventarioService inventarioService;
