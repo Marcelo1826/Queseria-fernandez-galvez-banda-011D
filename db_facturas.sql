@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2026 a las 20:44:31
--- Versión del servidor: 10.1.25-MariaDB
--- Versión de PHP: 5.6.31
+-- Tiempo de generación: 22-06-2026 a las 00:55:33
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,14 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `facturas` (
   `id` bigint(20) NOT NULL,
-  `cliente_rut` varchar(255) DEFAULT NULL,
   `fecha_emision` datetime(6) DEFAULT NULL,
   `iva` double DEFAULT NULL,
   `pago_id` bigint(20) DEFAULT NULL,
   `pedido_id` bigint(20) DEFAULT NULL,
   `total_final` double DEFAULT NULL,
   `total_neto` double DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `facturas`
+--
+
+INSERT INTO `facturas` (`id`, `fecha_emision`, `iva`, `pago_id`, `pedido_id`, `total_final`, `total_neto`) VALUES
+(1, '2026-06-02 00:00:00.000000', 1000, 2, 3, 12000, 11000),
+(3, '2026-06-02 00:00:00.000000', 2000, 3, 2, 13000, 11000);
 
 --
 -- Índices para tablas volcadas
@@ -57,7 +63,8 @@ ALTER TABLE `facturas`
 -- AUTO_INCREMENT de la tabla `facturas`
 --
 ALTER TABLE `facturas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
