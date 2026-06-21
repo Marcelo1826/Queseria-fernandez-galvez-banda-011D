@@ -37,7 +37,7 @@ class ProductosServiceTest {
         when(productosRepository.save(any(ProductosModelo.class))).thenReturn(producto);
 
         // 2. Ejecución
-        ProductosModelo resultado = productosService.guardarQueso(producto); // Ajusta si tu método se llama distinto
+        ProductosModelo resultado = productosService.guardarQueso(producto);
 
         // 3. Verificación
         assertNotNull(resultado);
