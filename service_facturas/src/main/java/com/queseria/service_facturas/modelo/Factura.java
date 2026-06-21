@@ -25,7 +25,6 @@ public class Factura {
     
     private Long pedidoId;
     private Long pagoId;
-    private String clienteRut;
     private Double totalNeto;
     private Double iva;
     private Double totalFinal;

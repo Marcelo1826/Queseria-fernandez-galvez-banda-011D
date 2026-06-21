@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/facturas")
 @Tag(name = "Servicio de Facturas", description = "Controlador para la gestión y emisión de facturas")
+@CrossOrigin(origins = "*")
 public class FacturaController {
 
     private final FacturaService facturaService;

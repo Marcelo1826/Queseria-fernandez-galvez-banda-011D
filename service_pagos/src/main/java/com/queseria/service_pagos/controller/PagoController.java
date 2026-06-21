@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/pagos")
 @Tag(name = "Servicio de Pagos", description = "Controlador para la gestión de pagos")
+@CrossOrigin(origins = "*")
 public class PagoController {
 
     @Autowired

@@ -32,7 +32,6 @@ public class FacturaServiceTest {
         Factura facturaInput = new Factura();
         facturaInput.setPedidoId(10L);
         facturaInput.setPagoId(5L);
-        facturaInput.setClienteRut("12345678-9");
         facturaInput.setTotalNeto(10000.0); 
 
         when(facturaRepository.save(any(Factura.class))).thenAnswer(invocation -> invocation.getArgument(0));
