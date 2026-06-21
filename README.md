@@ -136,3 +136,32 @@ GET http://localhost:9090/api/v1/pedidos
 GET http://localhost:9090/api/v1/detalle
 ```
 
+## Factura
+
+```http
+GET http://localhost:9090/api/v1/factura
+```
+
+## Pagos
+
+```http
+GET http://localhost:9090/api/v1/pagos
+```
+
+## notificaion
+
+```http
+GET http://localhost:9090/api/v1/notificaion
+```
+
+## Auth
+
+```http
+GET http://localhost:9090/auth
+```
+
+## Precios
+
+```http
+GET http://localhost:9090/api/v1/precios
+```
