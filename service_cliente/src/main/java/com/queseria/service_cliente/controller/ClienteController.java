@@ -16,8 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.queseria.service_cliente.modelo.Cliente;
 import com.queseria.service_cliente.service.ClienteService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/v1/cliente")
+@Tag(name = "Servicio Cliente", description = "Controlador para la gestión de Clientes")
 @CrossOrigin(origins = "*")
 public class ClienteController {
 
@@ -25,6 +29,7 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping
+    @Operation(summary = "Listar clientes")
     public List<Cliente> listar(){
         return clienteService.listarTodo();
     }
@@ -37,6 +42,7 @@ public class ClienteController {
     }
 
     @PostMapping
+    @Operation(summary = "Registrar un cliente")
     public ResponseEntity<Cliente> crear(@RequestBody Cliente cliente){
         return ResponseEntity.ok(clienteService.guardar(cliente));
     }
