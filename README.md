@@ -1,62 +1,138 @@
-Sistema de Gestión para la pyme "Queseria de mi sin ti" 
-Arquitectura de Microservicios
+# Sistema Quesería - Arquitectura de Microservicios
 
---------------------------------------------------------------------------------
-Tecnologías Utilizadas
+Proyecto desarrollado para la asignatura Fullstack de Duoc UC, utilizando arquitectura de microservicios con Spring Boot y Spring Cloud Gateway para la gestión integral de una quesería.
 
-Java 21
-Spring Boot
-Spring Security
-Spring Data JPA + Hibernate
-Bean Validation (JSR 380)
+# Integrantes
+
+- Marcelo Fernandez
+- Joy Castillo
+- Benjamin Erpel
+
+# Descripción del Proyecto
+
+El sistema permite administrar las operaciones principales de una quesería mediante microservicios independientes.
+Cada microservicio posee su propia base de datos y se comunica a través de un API Gateway.
+Las funcionalidades implementadas incluyen:
+
+- Gestión de clientes Puerto: 8081
+- Gestión de productos Puerto: 8082
+- Gestión de inventario Puerto: 8083
+- Gestión de pedidos Puerto: 8084
+- Gestión de detalle de pedidos Puerto: 8085
+- Gestion de precios Puerto: 8089
+- Gestion de pagos Puerto: 8091
+- Gestion de notificaciones Puerto: 8092
+- Gestion de facturas Puerto: 8093
+- Gestion de Login Puerto: 8094
+
+# Bibliotecas Utilizadas
+
+## Spring Boot Web
+Permite la creación de APIs REST.
+
+## Spring Data JPA
+Permite la persistencia de datos utilizando JPA e Hibernate.
+
+## MySQL Driver
+Conector para la base de datos MySQL.
+
+## Validation
+Validación de campos mediante anotaciones.
+
+## Lombok
+Reduce código repetitivo.
+
+## Spring Cloud Gateway
+Enrutamiento y centralización de solicitudes.
+
+## Springdoc OpenAPI (Swagger)
+Documentación automática de APIs.
+
+
+# Herramientas Utilizadas
+
+##Herramienta
+----------------------------
+Java JDK 21
+Spring Boot 
 Spring Cloud Gateway
 MySQL
 Maven
+Git
+GitHub
 Visual Studio Code
+Postman
 
---------------------------------------------------------------------------------
 
-Arquitectura del Proyecto
+# 🌐 Rutas API REST
 
-El sistema está compuesto por los siguientes microservicios:
+## Cliente
 
-Microservicio             Función                              
-Cliente service           Registro de los clientes   
-Producto service          Gestión de productos       
-Inventario service        Control de stock           
-Pedido service            Gestión de pedidos         
-Detalle pedido service    Detalle del pedido  
+### Obtener clientes
 
---------------------------------------------------------------------------------
+```http
+GET http://localhost:8081/api/v1/cliente
+```
 
-Modelo Entidad Relación (MER)
+### Buscar cliente por ID
 
-Entidades principales del sistema:
+```http
+GET http://localhost:8081/api/v1/cliente/1
+```
 
-Usuario
-Producto
-Inventario
-Pedido
-DetallePedido
+### Crear cliente
 
---------------------------------------------------------------------------------
+```http
+POST http://localhost:8081/api/v1/cliente
+```
 
-Validaciones Implementadas
-Se utiliza JSR 380:
+Body:
 
-@NotBlank
-@Email
-@Min
-@NotNull
+```json
+{
+  "nombre": "Marcelo Fernandez",
+  "email": "marcelo@gmail.com",
+  "telefono": "+56912345678",
+  "direccion": {
+    "calle": "Pasaje Samuel",
+    "numero": "3330",
+    "comuna": "Maipú",
+    "ciudad": "Santiago"
+  }
+}
+```
 
---------------------------------------------------------------------------------
-API Gateway
+---
 
-El sistema utiliza Spring Cloud Gateway como punto único de acceso para 
-todos los microservicios.
+# 🚪 Rutas API Gateway
 
---------------------------------------------------------------------------------
+## Cliente
 
-Autores
+```http
+GET http://localhost:9090/api/v1/cliente
+```
 
-Proyecto desarrollado por Marcelo Fernandez, Joy Castillo y Benjamin Erpel
+## Producto
+
+```http
+GET http://localhost:9090/api/v1/productos
+```
+
+## Inventario
+
+```http
+GET http://localhost:9090/api/v1/inventario
+```
+
+## Pedido
+
+```http
+GET http://localhost:9090/api/v1/pedidos
+```
+
+## Detalle Pedido
+
+```http
+GET http://localhost:9090/api/v1/detalle
+```
+
