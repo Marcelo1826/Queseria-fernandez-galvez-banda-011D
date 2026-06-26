@@ -60,8 +60,8 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 String path = exchange.getRequest().getURI().getPath();
                 String method = exchange.getRequest().getMethod().name();
                 
-                if (path.startsWith("/api/v1/clientes") && 
-                    (method.equals("POST") || method.equals("PUT") || method.equals("DELETE")) && 
+                if (path.startsWith("/api/v1/cliente") && 
+                    (method.equals("POST") || method.equals("GET") || method.equals("PUT") || method.equals("DELETE")) &&
                     roles.contains("CLIENTE")) {
                     
                     return onError(exchange, 
