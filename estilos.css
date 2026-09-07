@@ -4,7 +4,7 @@
     --bg-card: #ffffff;
     --text-primary: #1e293b;
     --text-secondary: #64748b;
-    --accent-color: #d97706; /* Color queso/dorado */
+    --accent-color: #d97706;
     --accent-hover: #b45309;
     --border-color: #e2e8f0;
     --code-bg: #0f172a;
@@ -72,14 +72,14 @@ header {
     border-color: var(--accent-color);
 }
 
-/* CONTAINER MAIN */
+
 .container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1.5rem;
 }
 
-/* HERO SECTION */
+
 .hero {
     background-color: var(--bg-card);
     padding: 2rem;
@@ -110,7 +110,7 @@ header {
     font-weight: 600;
 }
 
-/* CATALOGO DE PRODUCTOS */
+
 .catalog-section {
     margin-bottom: 2rem;
 }
@@ -235,7 +235,7 @@ header {
     background-color: var(--accent-hover);
 }
 
-/* GRID SECTIONS */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -284,7 +284,6 @@ header {
     justify-content: space-between;
 }
 
-/* SEARCH & MICROSERVICES */
 .search-bar {
     width: 100%;
     padding: 0.8rem;
@@ -321,7 +320,7 @@ header {
     font-weight: bold;
 }
 
-/* CODE BLOCK & API ROUTES */
+
 .code-block {
     background-color: var(--code-bg);
     color: var(--code-text);
@@ -356,7 +355,7 @@ header {
     color: #facc15;
 }
 
-/* FOOTER */
+
 footer {
     text-align: center;
     padding: 2rem;
