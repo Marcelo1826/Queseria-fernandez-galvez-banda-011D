@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Catálogo de Quesos - Quesería Gourmet</title>
+</head>
+<body>
+        <div class="logo">
+            <h1>Quesería Sin ti Maipú</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="registrar.html">Registrar</a>
+            <a href="login.html">login</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+        
+    </header>
+
+    <main class="container">
+        <section id="catalogo" class="catalog-section">
+            <div class="section-header">
+                <h2>Nuestra Selección de Quesos</h2>
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar por nombre o tipo...">
+            </div>
+
+            <div class="category-filtro">
+                <button class="filtro-btn active" data-category="all">Todos</button>
+                <button class="filtro-btn" data-category="madurado">Madurados</button>
+                <button class="filtro-btn" data-category="fresco">Frescos & Suaves</button>
+                <button class="filtro-btn" data-category="cabra">Cabra & Oveja</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1552767059-ce182eadfacb?q=80&w=400" alt="Queso Mantecoso Sur" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Queso Mantecoso Sur</h3>
+                        <p class="product-desc">Queso mantecoso artesanal elaborado con leche entera de vacas de libre pastoreo.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$7.500</span>
+                            <button class="add-cart-btn">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1589881133595-a3c085cf7321?q=80&w=400" alt="Queso Camembert" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Queso Camembert</h3>
+                        <p class="product-desc">Cremosa textura con corteza enmohecida comestible. Ideal para aperitivos.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$8.500</span>
+                            <button class="add-cart-btn">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?q=80&w=400" alt="Queso de Cabra Herencia" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Queso de Cabra Herencia</h3>
+                        <p class="product-desc">Queso semi-madurado 100% de leche de cabra sureño, con toque de pimienta.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$9.000</span>
+                            <button class="add-cart-btn">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1626957341926-98752fc2ba90?q=80&w=400" alt="Queso Azul Gourmet" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Queso Azul Gourmet</h3>
+                        <p class="product-desc">Sabor intenso y picante con vetas azuladas características.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$6.500</span>
+                            <button class="add-cart-btn">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1625085415348-be0ed938e260?q=80&w=400" alt="Queso Brie Premium" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Queso Brie Premium</h3>
+                        <p class="product-desc">Suave, cremoso y de aroma sutil. Ganador de premios regionales.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$7.800</span>
+                            <button class="add-cart-btn">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?q=80&w=400" alt="Queso de Oveja Trufado" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Queso de Oveja Trufado</h3>
+                        <p class="product-desc">Madurado por 6 meses con incrustaciones de trufa negra.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$12.500</span>
+                            <button class="add-cart-btn">Agregar 🛒</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
