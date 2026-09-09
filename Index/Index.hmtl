@@ -20,7 +20,7 @@
     <header>
 
         <div class="logo">
-            <h1>🧀 Quesería</h1>
+            <h1>🧀 Quesería Sin Ti</h1>
         </div>
 
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
