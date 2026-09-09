@@ -1,1 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quesería | Home</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+    
+
+    <header>
+
+        <div class="logo">
+            <h1>🧀 Quesería</h1>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="nav-links">
+
+            <a href="home.html" class="activo">
+                Home
+            </a>
+
+            <a href="#nosotros">
+                Nosotros
+            </a>
+
+            <a href="#blog">
+                Blog
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+            <a href="#carrito" class="carrito-link">
+                🛒 Carrito
+                <span id="carrito-contador">0</span>
+            </a>
+
+            <a href="login.html" class="btn-login-nav">
+                Iniciar sesión
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO
+         ========================================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    SABOR ARTESANAL
+                </span>
+
+                <h2>
+                    El mejor sabor comienza
+                    <span>con un buen queso.</span>
+                </h2>
+
+                <p>
+                    Descubre nuestra selección de quesos artesanales,
+                    preparados con ingredientes de calidad y mucho cariño.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#productos" class="btn-primary">
+                        Ver productos
+                    </a>
+
+                    <a href="#nosotros" class="btn-secondary">
+                        Conócenos
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="cheese-circle">
+                    🧀
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CATEGORÍAS
+             ========================================= -->
+
+        <section class="categorias">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    DESCUBRE
+                </span>
+
+                <h2>
+                    Encuentra tu queso favorito
+                </h2>
+
+                <p>
+                    Una selección pensada para todos los gustos.
+                </p>
+
+            </div>
+
+            <div class="categoria-grid">
+
+                <article class="categoria-card">
+                    <div class="categoria-icon">
+                        🧀
+                    </div>
+
+                    <h3>
+                        Quesos suaves
+                    </h3>
+
+                    <p>
+                        Cremosos, delicados y perfectos para cualquier ocasión.
+                    </p>
+
+                    <a href="#productos">
+                        Ver más →
+                    </a>
+                </article>
+
+
+                <article class="categoria-card">
+                    <div class="categoria-icon">
+                        🥪
+                    </div>
+
+                    <h3>
+                        Quesos maduros
+                    </h3>
+
+                    <p>
+                        Sabores intensos para quienes buscan algo especial.
+                    </p>
+
+                    <a href="#productos">
+                        Ver más →
+                    </a>
+                </article>
+
+
+                <article class="categoria-card">
+                    <div class="categoria-icon">
+                        🍽️
+                    </div>
+
+                    <h3>
+                        Para compartir
+                    </h3>
+
+                    <p>
+                        Opciones ideales para reuniones, tablas y celebraciones.
+                    </p>
+
+                    <a href="#productos">
+                        Ver más →
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PRODUCTOS
+             ========================================= -->
+
+        <section class="productos" id="productos">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    NUESTROS PRODUCTOS
+                </span>
+
+                <h2>
+                    Los favoritos de nuestros clientes
+                </h2>
+
+                <p>
+                    Elige tus favoritos y agrégalos al carrito.
+                </p>
+
+            </div>
+
+
+            <div class="productos-grid">
+
+                <!-- Producto 1 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-image">
+                        🧀
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-categoria">
+                            Queso artesanal
+                        </span>
+
+                        <h3>
+                            Queso Cheddar
+                        </h3>
+
+                        <p>
+                            Cremoso, intenso y perfecto para acompañar tus comidas.
+                        </p>
+
+                        <div class="producto-bottom">
+
+                            <strong>
+                                $8.990
+                            </strong>
+
+                            <button
+                                class="btn-carrito"
+                                data-producto="Queso Cheddar"
+                                data-precio="8990">
+                                + 🛒
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Producto 2 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-image">
+                        🧀
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-categoria">
+                            Queso artesanal
+                        </span>
+
+                        <h3>
+                            Queso Brie
+                        </h3>
+
+                        <p>
+                            Suave y cremoso, ideal para tablas y ocasiones especiales.
+                        </p>
+
+                        <div class="producto-bottom">
+
+                            <strong>
+                                $10.990
+                            </strong>
+
+                            <button
+                                class="btn-carrito"
+                                data-producto="Queso Brie"
+                                data-precio="10990">
+                                + 🛒
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Producto 3 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-image">
+                        🧀
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-categoria">
+                            Queso artesanal
+                        </span>
+
+                        <h3>
+                            Queso Gouda
+                        </h3>
+
+                        <p>
+                            Un clásico de sabor equilibrado y textura agradable.
+                        </p>
+
+                        <div class="producto-bottom">
+
+                            <strong>
+                                $9.490
+                            </strong>
+
+                            <button
+                                class="btn-carrito"
+                                data-producto="Queso Gouda"
+                                data-precio="9490">
+                                + 🛒
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Producto 4 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-image">
+                        🧀
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-categoria">
+                            Especialidad
+                        </span>
+
+                        <h3>
+                            Tabla Premium
+                        </h3>
+
+                        <p>
+                            Una selección de nuestros mejores quesos para compartir.
+                        </p>
+
+                        <div class="producto-bottom">
+
+                            <strong>
+                                $19.990
+                            </strong>
+
+                            <button
+                                class="btn-carrito"
+                                data-producto="Tabla Premium"
+                                data-precio="19990">
+                                + 🛒
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             NOSOTROS
+             ========================================= -->
+
+        <section class="nosotros" id="nosotros">
+
+            <div class="nosotros-content">
+
+                <span class="section-tag">
+                    NOSOTROS
+                </span>
+
+                <h2>
+                    Hecho con pasión por el buen queso.
+                </h2>
+
+                <p>
+                    Somos una pequeña quesería dedicada a entregar productos
+                    de calidad y sabores que convierten cualquier momento
+                    en una experiencia especial.
+                </p>
+
+                <p>
+                    Seleccionamos cuidadosamente cada producto para que
+                    puedas disfrutar de una experiencia deliciosa desde
+                    el primer bocado.
+                </p>
+
+                <a href="#contacto" class="btn-primary">
+                    Contáctanos
+                </a>
+
+            </div>
+
+            <div class="nosotros-icon">
+                🧀
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             BLOG
+             ========================================= -->
+
+        <section class="blog" id="blog">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    NUESTRO BLOG
+                </span>
+
+                <h2>
+                    Aprende más sobre quesos
+                </h2>
+
+                <p>
+                    Consejos, recetas y curiosidades para los amantes del queso.
+                </p>
+
+            </div>
+
+
+            <div class="blog-grid">
+
+                <article class="blog-card">
+
+                    <div class="blog-image">
+                        🧀
+                    </div>
+
+                    <div class="blog-info">
+
+                        <span>
+                            Consejos
+                        </span>
+
+                        <h3>
+                            ¿Cómo conservar correctamente el queso?
+                        </h3>
+
+                        <p>
+                            Algunos consejos sencillos para mantener
+                            tus quesos frescos y deliciosos.
+                        </p>
+
+                        <a href="#">
+                            Leer artículo →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+                    <div class="blog-image">
+                        🍷
+                    </div>
+
+                    <div class="blog-info">
+
+                        <span>
+                            Maridaje
+                        </span>
+
+                        <h3>
+                            Los mejores acompañamientos
+                        </h3>
+
+                        <p>
+                            Descubre qué alimentos combinan mejor
+                            con diferentes tipos de queso.
+                        </p>
+
+                        <a href="#">
+                            Leer artículo →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+                    <div class="blog-image">
+                        🍽️
+                    </div>
+
+                    <div class="blog-info">
+
+                        <span>
+                            Recetas
+                        </span>
+
+                        <h3>
+                            Una tabla de quesos perfecta
+                        </h3>
+
+                        <p>
+                            Aprende a preparar una tabla de quesos
+                            para sorprender a tus invitados.
+                        </p>
+
+                        <a href="#">
+                            Leer artículo →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CONTACTO
+             ========================================= -->
+
+        <section class="contacto" id="contacto">
+
+            <div class="contacto-content">
+
+                <span class="section-tag">
+                    CONTACTO
+                </span>
+
+                <h2>
+                    ¿Tienes alguna pregunta?
+                </h2>
+
+                <p>
+                    Estamos aquí para ayudarte. Escríbenos y te responderemos
+                    lo antes posible.
+                </p>
+
+                <div class="contacto-datos">
+
+                    <div>
+                        <span>📧</span>
+                        <p>contacto@queseria.cl</p>
+                    </div>
+
+                    <div>
+                        <span>📞</span>
+                        <p>+56 9 1234 5678</p>
+                    </div>
+
+                    <div>
+                        <span>📍</span>
+                        <p>Santiago, Chile</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>
+                🧀 Quesería
+            </h3>
+
+            <p>
+                El sabor de lo artesanal.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="#nosotros">
+                    Nosotros
+                </a>
+
+                <a href="#blog">
+                    Blog
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+                <a href="login.html">
+                    Iniciar sesión
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Quesería. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>
