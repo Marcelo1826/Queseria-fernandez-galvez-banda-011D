@@ -1,1 +1,163 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Quesería</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>🧀 Quesería</h1>
+    </div>
+
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html" class="activo">Contacto</a>
+        <a href="carrito.html" class="carrito-link">
+            🛒 Carrito
+            <span id="carrito-contador">0</span>
+        </a>
+        <a href="login.html" class="btn-login-nav">Iniciar sesión</a>
+    </nav>
+</header>
+
+<main>
+    <section class="contacto-intro">
+        <span class="section-tag">CONTACTO</span>
+        <h2>Estamos para ayudarte</h2>
+        <p>
+            ¿Tienes alguna pregunta sobre nuestros productos o necesitas más
+            información? Escríbenos y estaremos encantados de ayudarte.
+        </p>
+    </section>
+
+    <section class="contacto-section">
+        <div class="contacto-grid">
+
+            <div class="contacto-info">
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <div>
+                        <span>EMAIL</span>
+                        <h3>contacto@queseria.cl</h3>
+                        <p>Escríbenos cuando quieras.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <span>TELÉFONO</span>
+                        <h3>+56 9 1234 5678</h3>
+                        <p>Estamos disponibles para atender tus consultas.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <span>UBICACIÓN</span>
+                        <h3>Santiago, Chile</h3>
+                        <p>Encuentra nuestra quesería en Santiago.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🕐</div>
+                    <div>
+                        <span>HORARIO</span>
+                        <h3>Lunes a viernes</h3>
+                        <p>09:00 a 18:00 hrs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <span class="form-tag">ENVÍANOS UN MENSAJE</span>
+                <h3>¿En qué podemos ayudarte?</h3>
+
+                <form id="contacto-form">
+                    <div class="form-row">
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Tu nombre"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Correo electrónico</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="tu@email.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="asunto">Asunto</label>
+                        <input
+                            type="text"
+                            id="asunto"
+                            name="asunto"
+                            placeholder="¿Sobre qué quieres consultarnos?"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            placeholder="Escribe tu mensaje..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">
+                        Enviar mensaje
+                    </button>
+
+                    <p id="mensaje-exito" class="mensaje-exito"></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h3>🧀 Quesería Sin Ti</h3>
+        <p>El sabor de lo artesanal.</p>
+
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Iniciar sesión</a>
+        </div>
+
+        <p class="copyright">© 2026 Quesería. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="contacto.js"></script>
+</body>
+</html>
