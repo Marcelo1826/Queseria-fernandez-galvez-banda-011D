@@ -1016,3 +1016,160 @@ footer {
     margin-top: 1.5rem !important;
     font-size: 0.75rem !important;
 }
+
+
+
+
+
+
+
+
+
+
+.nav-links a.boton-registrarse-nav {
+    background-color: var(--light-accent); /* Fondo naranja claro */
+    color: var(--accent-color);            /* Texto naranja */
+    border: 1px solid var(--light-border);  /* Borde naranja claro opcional */
+    border-radius: 20px;                   /* Bordes completamente redondeados */
+    padding: 0.5rem 1.2rem;                /* Espaciado interno cómodo */
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a.boton-registrarse-nav:hover {
+    background-color: var(--accent-color); /* Al pasar el mouse se vuelve naranja fuerte */
+    color: #ffffff;                        /* Texto blanco */
+}
+
+/* Seccion de registro de usuarios */
+
+.nav-links a.boton-home-nav {
+    color: black;            /* Texto naranja */
+    border: 1px solid black;  /* Borde naranja claro opcional */
+    border-radius: 20px;                   /* Bordes completamente redondeados */
+    padding: 0.5rem 1.2rem;                /* Espaciado interno cómodo */
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.formulario-registro {
+    width: 90%;                  
+    max-width: 600px;            
+    margin: 40px auto;           
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px 30px;          
+    box-shadow: var(--shadow);
+}
+
+.titulo-registro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.queso {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px auto;
+    background-color: white;   
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-registro h2 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.titulo-registro p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.formulario-registrar {
+    margin-bottom: 20px;
+}
+
+.formulario-registrar label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.formulario-registrar input[type="text"],
+.formulario-registrar input[type="email"],
+.formulario-registrar input[type="tel"],
+.formulario-registrar input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.formulario-registrar input:focus {
+    border-color: var(--accent-color);
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.checkbox label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.checkbox input {
+    accent-color: var(--accent-color);
+    margin-right: 6px;
+}
+
+.checkbox a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.boton-registrar {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.boton-registrar:hover {
+    background-color: var(--accent-hover);
+}
+
+.pie-pagina {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.pie-pagina a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
