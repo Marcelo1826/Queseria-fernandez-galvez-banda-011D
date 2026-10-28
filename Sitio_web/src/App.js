@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Carrito from "./components/Carrito";
+import Contacto from "./components/Contacto";
 import { productosPrueba } from "./data/productosPrueba";
 
 function App() {
@@ -34,10 +35,14 @@ function App() {
 
   return (
     <div className="App">
+      {/* Componente del carrito de compras */}
       <Carrito
         productos={productos}
         setProductos={setProductos}
       />
+
+      {/* Componente del formulario de contacto */}
+      <Contacto />
     </div>
   );
 }
