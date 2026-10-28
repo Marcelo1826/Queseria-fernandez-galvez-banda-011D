@@ -1,21 +1,4 @@
-import { useState } from "react";
-
-function Carrito() {
-  // Productos de ejemplo para probar el carrito
-  const [productos, setProductos] = useState([
-    {
-      id: 1,
-      nombre: "Queso Gouda",
-      precio: 4500,
-      cantidad: 2
-    },
-    {
-      id: 2,
-      nombre: "Queso Mantecoso",
-      precio: 3990,
-      cantidad: 1
-    }
-  ]);
+function Carrito({ productos, setProductos }) {
 
   // Aumentar la cantidad de un producto
   const aumentarCantidad = (id) => {
