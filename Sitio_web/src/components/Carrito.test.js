@@ -26,14 +26,16 @@ function CarritoDePrueba({ productosIniciales = productosPrueba }) {
 
 describe("Pruebas unitarias del carrito de compras", () => {
 
-  // PRUEBA 1: Mostrar productos
+// PRUEBA 1: Mostrar productos
   test("muestra los productos del carrito", () => {
-    render(<CarritoDePrueba />);
+  render(<CarritoDePrueba />);
 
-    expect(screen.getByText("Queso Gouda")).toBeInTheDocument();
-    expect(screen.getByText("Cantidad: 2")).toBeInTheDocument();
-  });
+  expect(
+    screen.getByRole("heading", { name: /queso gouda/i })
+  ).toBeInTheDocument();
 
+  expect(screen.getByText("Cantidad: 2")).toBeInTheDocument();
+ });
   // PRUEBA 2: Aumentar cantidad
   test("aumenta la cantidad de un producto", () => {
     render(<CarritoDePrueba />);

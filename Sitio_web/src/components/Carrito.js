@@ -22,14 +22,14 @@ function Carrito({ productos, setProductos }) {
     );
   };
 
-  // Eliminar un producto del carrito
+  // Eliminar un producto
   const eliminarProducto = (id) => {
     setProductos((productosActuales) =>
       productosActuales.filter((producto) => producto.id !== id)
     );
   };
 
-  // Calcular el total de la compra
+  // Calcular el total
   const total = productos.reduce(
     (acumulador, producto) =>
       acumulador + producto.precio * producto.cantidad,
@@ -37,57 +37,98 @@ function Carrito({ productos, setProductos }) {
   );
 
   return (
-    <div>
-      <h2>Mi carrito de compras 🛒</h2>
+    <div className="container py-5">
+
+      <h2 className="text-center mb-4">
+        Mi carrito de compras 🛒
+      </h2>
 
       {productos.length === 0 ? (
-        <p>Tu carrito está vacío.</p>
+        <div className="alert alert-info text-center">
+          Tu carrito está vacío.
+        </div>
       ) : (
-        <>
-          {productos.map((producto) => (
-            <div key={producto.id}>
-              <h3>{producto.nombre}</h3>
+        <div className="row g-4">
 
-              <p>
-                Precio: ${producto.precio.toLocaleString("es-CL")}
-              </p>
+          <div className="col-lg-8">
+            {productos.map((producto) => (
+              <div className="card shadow-sm mb-3" key={producto.id}>
+                <div className="card-body">
 
-              <p>Cantidad: {producto.cantidad}</p>
+                  <h3 className="h5 card-title">
+                    🧀 {producto.nombre}
+                  </h3>
 
-              <button
-                type="button"
-                onClick={() => disminuirCantidad(producto.id)}
-                disabled={producto.cantidad === 1}
-              >
-                ➖
-              </button>
+                  <p className="text-muted mb-2">
+                    Precio: ${producto.precio.toLocaleString("es-CL")}
+                  </p>
 
-              <button
-                type="button"
-                onClick={() => aumentarCantidad(producto.id)}
-              >
-                ➕
-              </button>
+                  <p className="mb-2">
+                    Cantidad: {producto.cantidad}
+                  </p>
 
-              <button
-                type="button"
-                onClick={() => eliminarProducto(producto.id)}
-              >
-                🗑️ Eliminar
-              </button>
+                  <div className="d-flex flex-wrap gap-2 mb-3">
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary"
+                      onClick={() => disminuirCantidad(producto.id)}
+                      disabled={producto.cantidad === 1}
+                    >
+                      ➖
+                    </button>
 
-              <p>
-                Subtotal: $
-                {(producto.precio * producto.cantidad).toLocaleString("es-CL")}
-              </p>
+                    <button
+                      type="button"
+                      className="btn btn-outline-success"
+                      onClick={() => aumentarCantidad(producto.id)}
+                    >
+                      ➕
+                    </button>
 
-              <hr />
+                    <button
+                      type="button"
+                      className="btn btn-outline-danger"
+                      onClick={() => eliminarProducto(producto.id)}
+                    >
+                      🗑️ Eliminar
+                    </button>
+                  </div>
+
+                  <p className="fw-bold mb-0">
+                    Subtotal: $
+                    {(producto.precio * producto.cantidad).toLocaleString("es-CL")}
+                  </p>
+
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="col-lg-4">
+            <div className="card shadow-sm">
+              <div className="card-body text-center">
+
+                <h3 className="h5">Resumen de compra</h3>
+
+                <hr />
+
+                <h3 className="h4 text-success">
+                  Total: ${total.toLocaleString("es-CL")}
+                </h3>
+
+              </div>
             </div>
-          ))}
-        </>
+          </div>
+
+        </div>
       )}
 
-      <h3>Total: ${total.toLocaleString("es-CL")}</h3>
+      {productos.length === 0 && (
+        <h3 className="text-center mt-4">
+          Total: ${total.toLocaleString("es-CL")}
+        </h3>
+      )}
+
     </div>
   );
 }
