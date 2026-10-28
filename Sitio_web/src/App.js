@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  Navigate
+} from "react-router-dom";
 
 import "./App.css";
 import Carrito from "./components/Carrito";
@@ -35,11 +41,43 @@ function App() {
     }
   }, [productos]);
 
+  // Agregar productos nuevos al carrito
+  // Esta función se conectará al catálogo cuando esté disponible
+  const agregarAlCarrito = (productoNuevo) => {
+    setProductos((productosActuales) => {
+      // Buscar si el producto ya existe en el carrito
+      const productoExistente = productosActuales.find(
+        (producto) => producto.id === productoNuevo.id
+      );
+
+      // Si ya existe, aumentar su cantidad
+      if (productoExistente) {
+        return productosActuales.map((producto) =>
+          producto.id === productoNuevo.id
+            ? {
+                ...producto,
+                cantidad: producto.cantidad + 1
+              }
+            : producto
+        );
+      }
+
+      // Si no existe, agregarlo con cantidad 1
+      return [
+        ...productosActuales,
+        {
+          ...productoNuevo,
+          cantidad: 1
+        }
+      ];
+    });
+  };
+
   return (
     <BrowserRouter>
       <div className="App">
 
-        {/* Navegación temporal para probar nuestras páginas */}
+        {/* Navegación temporal de la Quesería */}
         <nav>
           <h1>🧀 Quesería</h1>
 
@@ -50,7 +88,7 @@ function App() {
 
         <hr />
 
-        {/* Configuración de las rutas */}
+        {/* Rutas de la aplicación */}
         <Routes>
           <Route
             path="/"

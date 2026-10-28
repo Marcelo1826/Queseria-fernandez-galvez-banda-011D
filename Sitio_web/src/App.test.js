@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("muestra el carrito de compras al iniciar la aplicación", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const tituloCarrito = screen.getByRole("heading", {
+    name: /mi carrito de compras/i
+  });
+
+  expect(tituloCarrito).toBeInTheDocument();
 });
