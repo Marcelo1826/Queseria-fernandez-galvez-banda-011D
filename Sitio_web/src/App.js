@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
+
 import "./App.css";
 import Carrito from "./components/Carrito";
 import Contacto from "./components/Contacto";
 import { productosPrueba } from "./data/productosPrueba";
 
 function App() {
-  // Recuperar el carrito guardado o cargar los productos de prueba
+  // Recuperar el carrito guardado o utilizar los productos de prueba
   const [productos, setProductos] = useState(() => {
     try {
       const carritoGuardado = localStorage.getItem("carrito");
@@ -24,7 +26,7 @@ function App() {
     return productosPrueba.map((producto) => ({ ...producto }));
   });
 
-  // Guardar el carrito cada vez que cambian los productos
+  // Guardar los cambios del carrito
   useEffect(() => {
     try {
       localStorage.setItem("carrito", JSON.stringify(productos));
@@ -34,16 +36,45 @@ function App() {
   }, [productos]);
 
   return (
-    <div className="App">
-      {/* Componente del carrito de compras */}
-      <Carrito
-        productos={productos}
-        setProductos={setProductos}
-      />
+    <BrowserRouter>
+      <div className="App">
 
-      {/* Componente del formulario de contacto */}
-      <Contacto />
-    </div>
+        {/* Navegación temporal para probar nuestras páginas */}
+        <nav>
+          <h1>🧀 Quesería</h1>
+
+          <Link to="/carrito">🛒 Carrito</Link>
+          {" | "}
+          <Link to="/contacto">📩 Contacto</Link>
+        </nav>
+
+        <hr />
+
+        {/* Configuración de las rutas */}
+        <Routes>
+          <Route
+            path="/"
+            element={<Navigate to="/carrito" replace />}
+          />
+
+          <Route
+            path="/carrito"
+            element={
+              <Carrito
+                productos={productos}
+                setProductos={setProductos}
+              />
+            }
+          />
+
+          <Route
+            path="/contacto"
+            element={<Contacto />}
+          />
+        </Routes>
+
+      </div>
+    </BrowserRouter>
   );
 }
 
