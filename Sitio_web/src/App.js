@@ -10,6 +10,7 @@ import {
 import "./App.css";
 import Carrito from "./components/Carrito";
 import Contacto from "./components/Contacto";
+import ProductosBackend from "./components/ProductosBackend";
 import { productosPrueba } from "./data/productosPrueba";
 
 function App() {
@@ -84,6 +85,8 @@ function App() {
           <Link to="/carrito">🛒 Carrito</Link>
           {" | "}
           <Link to="/contacto">📩 Contacto</Link>
+          {" | "}
+          <Link to="/productos-backend">🧀 Productos reales</Link>
         </nav>
 
         <hr />
@@ -108,6 +111,12 @@ function App() {
           <Route
             path="/contacto"
             element={<Contacto />}
+          />
+
+          {/* Ruta temporal para consultar productos desde MySQL */}
+          <Route
+            path="/productos-backend"
+            element={<ProductosBackend />}
           />
         </Routes>
 
