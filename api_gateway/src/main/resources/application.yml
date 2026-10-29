@@ -13,7 +13,9 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "http://localhost:9090"
+            allowedOrigins:
+              - "http://localhost:3000"
+              - "http://localhost:9090"
             allowedMethods:
               - GET
               - POST
@@ -25,6 +27,10 @@ spring:
       discovery:
         locator:
           enabled: true
+
+      # Evita cabeceras CORS duplicadas entre Gateway y microservicios
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST
 
       routes:
 
