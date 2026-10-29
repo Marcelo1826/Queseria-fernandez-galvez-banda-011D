@@ -1,3 +1,5 @@
+import { calcularSubtotal, calcularTotal } from "../utils/carritoUtils";
+
 function Carrito({ productos, setProductos }) {
 
   // Aumentar la cantidad de un producto
@@ -29,12 +31,8 @@ function Carrito({ productos, setProductos }) {
     );
   };
 
-  // Calcular el total
-  const total = productos.reduce(
-    (acumulador, producto) =>
-      acumulador + producto.precio * producto.cantidad,
-    0
-  );
+  // Calcular el total utilizando la función reutilizable
+  const total = calcularTotal(productos);
 
   return (
     <div className="container py-5">
@@ -96,7 +94,10 @@ function Carrito({ productos, setProductos }) {
 
                   <p className="fw-bold mb-0">
                     Subtotal: $
-                    {(producto.precio * producto.cantidad).toLocaleString("es-CL")}
+                    {calcularSubtotal(
+                      producto.precio,
+                      producto.cantidad
+                    ).toLocaleString("es-CL")}
                   </p>
 
                 </div>
